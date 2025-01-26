@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const addButton = document.getElementById("add-task-btn");
@@ -29,4 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
         taskInput.value="";
     
     };
+    addButton.addEventListener("click",addTask);
+    taskInput.addEventListener("keypress",()=>{
+        if(event.key==="Enter"){
+            addTask();
+        }
+});
+
 });
