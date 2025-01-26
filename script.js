@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("enter a task.");
             return;
         }
+        const Items =document.createElement("li");
+        Items.textContent=taskText;
 
+
+        const removeButtom =document.createElement("btn");
+        removeButtom.textContent="Remove";
+        removeButtom.className="remove-btn";
     };
 });
