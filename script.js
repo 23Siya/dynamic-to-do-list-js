@@ -16,8 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
         Items.textContent= taskText;
 
 
-        const removeButtom =document.createElement("btn");
-        removeButtom.textContent="Remove";
-        removeButtom.className="remove-btn";
+        const removeButton =document.createElement("Button");
+        removeButton.textContent="Remove";
+        removeButton.className="remove-btn";
+        removeButton.addEventListener("onClick", ()=>{
+           
+            taskList.removeChild(Items);
+
+        });
+        Items.append(removeButton);
+        taskList.append(Items);
+        taskInput.value="";
+    
     };
 });
